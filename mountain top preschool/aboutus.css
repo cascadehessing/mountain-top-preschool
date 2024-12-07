@@ -174,14 +174,26 @@ footer .social img {
 }
 
 @media (max-width: 768px) {
+    /* Adjust general font size */
     body {
         font-size: 18px;
     }
 
+    /* Header adjusts to a column layout */
     header {
         grid-template-columns: 1fr;
         text-align: center;
+        gap: 10px;
+    }
+
+    nav {
+        justify-content: center;
         gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.9em;
     }
 
     .page-2-title,
@@ -190,7 +202,6 @@ footer .social img {
     }
 
     .card-img2,
-    .games #card-img2,
     .sight-words img,
     .poems img,
     .nature img {
@@ -198,41 +209,44 @@ footer .social img {
         height: auto;
     }
 
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    nav a {
-        padding: 8px 12px;
+    .page-2-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 }
 
 @media (max-width: 480px) {
+    /* Adjust body font size for smaller screens */
     body {
         font-size: 16px;
     }
 
+    /* Simplify navigation links */
     nav a {
         padding: 5px 10px;
-        font-size: 0.9em;
+        font-size: 0.8em;
+    }
+
+    /* Footer stacks vertically */
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .msg h2 {
         font-size: 1.5em;
     }
 
-    footer {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .card-img2,
-    .games #card-img2,
     .sight-words img,
     .poems img,
     .nature img {
-        max-width: 150px;
+        max-width: 200px;
         height: auto;
+    }
+
+    .page-2-grid {
+        grid-template-columns: 1fr;
     }
 }
