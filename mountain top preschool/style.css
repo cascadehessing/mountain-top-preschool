@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
-
 body {
     background-color: #1F628E;
     font-family: 'Coming Soon', 'Josefin Sans', Helvetica, sans-serif;
@@ -13,16 +11,18 @@ body {
 }
 
 #content {
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px; 
 }
 
 header {
     display: grid;
-    grid-template-columns: 150px auto;
+    grid-template-columns: 1fr 2fr;
     background-color: white;
     padding: 10px 0;
     align-items: center;
+    gap: 10px;
 }
 
 #logo_link {
@@ -33,7 +33,8 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 nav a {
@@ -54,7 +55,9 @@ nav a:hover {
 }
 
 #hero-img {
-    width: 75%;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
 }
 
 #hero-msg {
@@ -65,7 +68,7 @@ nav a:hover {
 
 .home-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     padding: 20px;
 }
@@ -76,6 +79,147 @@ nav a:hover {
     border-radius: 10px;
     padding: 10px;
 }
+
+.card-img1,
+.card-img2 {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+.page-2-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+.page-2-title,
+.our-curriculum {
+    grid-column: 1 / -1;
+    color: white;
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.about,
+.curriculum {
+    grid-column: 1 / -1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    color: #1F628E;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.sight-words img,
+.poems img,
+.nature img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto;
+}
+
+#background {
+    grid-column: 1 / -1;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.halloween {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.msg {
+    text-align: center;
+    color: white;
+    grid-column: 1 / -1;
+    margin: 20px 0;
+}
+
+.msg h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: #1F628E;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+footer a {
+    color: #1F628E;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .social img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+.logo {
+    height: 80px;
+}
+
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .home-grid,
+    .page-2-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller card size */
+    }
+
+    .page-2-title,
+    .our-curriculum {
+        font-size: 1.5em;
+    }
+
+    body {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 5px 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .msg h2 {
+        font-size: 1.5em;
+    }
+
+    body {
+        font-size: 16px;
+    }
+}
+
 
 .card-img2 {
     width: 450px;
@@ -160,30 +304,22 @@ nav a:hover {
     height: 600px;
 }
 
-footer {
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px;
-    color: #1F628E;
-    margin-top: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+body {
+    background-color: #1F628E;
+    font-family: 'Coming Soon', 'Josefin Sans', Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 
-footer a {
-    color: #1F628E;
-    text-decoration: none;
+* {
+    box-sizing: border-box;
 }
 
-footer a:hover {
-    text-decoration: underline;
-}
-
-footer .social img {
-    width: 30px;
-    margin: 0 5px;
-}
-
-.logo {
-    height: 80px;
+#content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; 
 }
