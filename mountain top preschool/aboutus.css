@@ -209,6 +209,11 @@ footer .social img {
         height: auto;
     }
 
+    .games #card-img2 {
+        max-width: 425px;
+        height: auto;
+    }
+
     .page-2-grid {
         grid-template-columns: 1fr;
         gap: 15px;
