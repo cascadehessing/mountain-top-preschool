@@ -80,6 +80,12 @@ nav a:hover {
     padding: 10px;
 }
 
+.card-img1 {
+    width: 450px;
+    height: 450px;
+    border-radius: 10px;
+}
+
 footer {
     background-color: white;
     display: flex;
@@ -110,6 +116,36 @@ footer .social img {
     height: 80px;
 }
 
+@media (max-width: 1400px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .home-grid,
+    .page-2-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Smaller card size */
+    }
+
+    .page-2-title,
+    .our-curriculum {
+        font-size: 1.5em;
+    }
+
+    .card-img1{
+        height: 325px;
+        width: 325px;
+    }
+
+    body {
+        font-size: 18px;
+    }
+}
+
 @media (max-width: 768px) {
     header {
         grid-template-columns: 1fr;
@@ -131,17 +167,9 @@ footer .social img {
     }
 
     .card-img1{
-        height: 130px;
-        width: 130px;
-    }
-    .card-img2 {
-        height: 190px;
-        width: 130px;
-    }
-
-    .games #card-img2 {
-        height: 190px;
-        width: 130px;
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
 
     body {
@@ -169,7 +197,7 @@ footer .social img {
 
     .card-img1,
     .card-img2 {
-        height: 150px;
+        height: 100px;
         width: 100px;
     }
 }
