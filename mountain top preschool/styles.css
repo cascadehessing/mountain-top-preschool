@@ -124,3 +124,14 @@ footer .social img {
 .logo {
     height: 80px;
 }
+
+@media (max-width: 480px) {
+    nav a {
+        padding: 5px 10px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
