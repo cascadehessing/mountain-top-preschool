@@ -175,31 +175,6 @@ footer .social img {
 
 /* Media Queries for Responsiveness */
 
-/* Desktop Screens (min-width: 1400px) */
-@media (min-width: 1400px) {
-    body {
-        font-size: 1.5vw; /* Adjust font size for desktop */
-    }
-
-    header {
-        grid-template-columns: 1fr; /* Stack logo and nav on desktop */
-        text-align: center;
-    }
-
-    nav {
-        justify-content: center;
-    }
-
-    .home-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Larger cards */
-    }
-
-    .card-img {
-        max-width: 500px;
-        height: auto;
-    }
-}
-
 /* Tablet Screens (max-width: 768px) */
 @media (max-width: 768px) {
     body {
