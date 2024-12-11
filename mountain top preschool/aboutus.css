@@ -1,7 +1,8 @@
+/* General Styles */
 body {
     background-color: #1F628E;
     font-family: 'Coming Soon', 'Josefin Sans', Helvetica, sans-serif;
-    font-size: 22px;
+    font-size: 2vw; /* Fluid typography */
     margin: 0;
     padding: 0;
 }
@@ -11,11 +12,12 @@ body {
 }
 
 #content {
-    max-width: 1200px;
+    max-width: 1800px;
     margin: 0 auto;
-    padding: 0 15px; 
+    padding: 0 5%; /* Responsive horizontal padding */
 }
 
+/* Header */
 header {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -35,12 +37,14 @@ nav {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+    flex-wrap: wrap; /* Allows stacking of nav items on smaller screens */
 }
 
 nav a {
     text-decoration: none;
     padding: 10px 20px;
     color: #1F628E;
+    font-size: 1.2rem; /* Adjusted font size for responsiveness */
 }
 
 nav a:hover {
@@ -49,6 +53,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
+/* Hero Section */
 #hero {
     text-align: center;
     margin: 20px 0;
@@ -60,17 +65,20 @@ nav a:hover {
     height: auto;
 }
 
-.card-img2 {
-    width: 450px;
+/* Card Images */
+.card-img{
+    width: 100%; /* Makes the image scale to the container */
+    max-width: 500px; /* Restrict max width */
+    height: auto;
     border-radius: 10px;
-    height: 600px;
 }
 
+/* Page 2 Grid */
 .page-2-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 5%; /* Responsive padding */
     text-align: center;
 }
 
@@ -82,6 +90,7 @@ nav a:hover {
     margin: 20px 0;
 }
 
+/* Page 2 Sections */
 .page-2-grid section {
     background-color: white;
     border-radius: 10px;
@@ -89,13 +98,8 @@ nav a:hover {
     color: #1F628E;
 }
 
-.card-img1 {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.about,
-.curriculum {
+/* About and Curriculum Sections */
+.about, .curriculum {
     grid-column: 1 / -1;
     padding: 20px;
     background-color: white;
@@ -105,26 +109,21 @@ nav a:hover {
     line-height: 1.5;
 }
 
-.sight-words img,
-.poems img,
-.nature img {
-    width: 100%;
-    border-radius: 10px;
-    height: 500px;
-}
-
+/* Background Section */
 #background {
     grid-column: 1 / -1;
     text-align: center;
     margin-top: 20px;
 }
 
+/* Halloween Image */
 .halloween {
     width: 100%;
     border-radius: 10px;
     margin: 20px 0;
 }
 
+/* Message Section */
 .msg {
     text-align: center;
     color: white;
@@ -133,26 +132,27 @@ nav a:hover {
 }
 
 .msg h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: clamp(1.5rem, 3vw, 2em); /* Fluid typography */
 }
 
-.games #card-img2 {
-    width: 425px;
+.games #card-img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     border-radius: 10px;
-    height: 600px;
 }
 
+/* Footer */
 footer {
     background-color: white;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
     color: #1F628E;
     margin-top: 20px;
     gap: 10px;
+    flex-wrap: wrap; /* Allows footer items to wrap */
 }
 
 footer a {
@@ -173,13 +173,39 @@ footer .social img {
     height: 80px;
 }
 
-@media (max-width: 768px) {
-    /* Adjust general font size */
+/* Media Queries for Responsiveness */
+
+/* Desktop Screens (min-width: 1400px) */
+@media (min-width: 1400px) {
     body {
-        font-size: 18px;
+        font-size: 1.5vw; /* Adjust font size for desktop */
     }
 
-    /* Header adjusts to a column layout */
+    header {
+        grid-template-columns: 1fr; /* Stack logo and nav on desktop */
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .home-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Larger cards */
+    }
+
+    .card-img {
+        max-width: 500px;
+        height: auto;
+    }
+}
+
+/* Tablet Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    body {
+        font-size: 18px; /* Adjust font size for tablet */
+    }
+
     header {
         grid-template-columns: 1fr;
         text-align: center;
@@ -201,16 +227,13 @@ footer .social img {
         font-size: 1.5em;
     }
 
-    .card-img2,
-    .sight-words img,
-    .poems img,
-    .nature img {
-        max-width: 425px;
+    .card-img {
+        max-width: 100%; /* Ensure images scale correctly */
         height: auto;
     }
 
-    .games #card-img2 {
-        max-width: 425px;
+    .games #card-img {
+        max-width: 100%; /* Ensure images scale correctly */
         height: auto;
     }
 
@@ -220,19 +243,17 @@ footer .social img {
     }
 }
 
+/* Small Mobile Screens (max-width: 480px) */
 @media (max-width: 480px) {
-    /* Adjust body font size for smaller screens */
     body {
-        font-size: 16px;
+        font-size: 16px; /* Adjust font size for mobile */
     }
 
-    /* Simplify navigation links */
     nav a {
         padding: 5px 10px;
         font-size: 0.8em;
     }
 
-    /* Footer stacks vertically */
     footer {
         flex-direction: column;
         align-items: center;
@@ -243,11 +264,8 @@ footer .social img {
         font-size: 1.5em;
     }
 
-    .card-img2,
-    .sight-words img,
-    .poems img,
-    .nature img {
-        max-width: 250px;
+    .card-img {
+        max-width: 250px; /* Adjust image size */
         height: auto;
     }
 
@@ -255,8 +273,8 @@ footer .social img {
         grid-template-columns: 1fr;
     }
 
-    .games #card-img2 {
-        max-width: 250px;
+    .games #card-img {
+        max-width: 250px; /* Adjust image size */
         height: auto;
     }
 }
