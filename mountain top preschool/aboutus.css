@@ -43,7 +43,7 @@ nav {
 nav a {
     text-decoration: none;
     padding: 10px 20px;
-    color: #1F628E;
+    color: #e8586d;
     font-size: 1.2rem; /* Adjusted font size for responsiveness */
 }
 
@@ -95,7 +95,7 @@ nav a:hover {
     background-color: white;
     border-radius: 10px;
     padding: 10px;
-    color: #1F628E;
+    color: #e8586d;
 }
 
 /* About and Curriculum Sections */
@@ -104,7 +104,7 @@ nav a:hover {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    color: #1F628E;
+    color: #e8586d;
     font-size: 1.1em;
     line-height: 1.5;
 }
@@ -124,6 +124,7 @@ nav a:hover {
 }
 
 /* Message Section */
+
 .msg {
     text-align: center;
     color: white;
@@ -149,14 +150,14 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    color: #1F628E;
+    color: #e8586d;
     margin-top: 20px;
     gap: 10px;
     flex-wrap: wrap; /* Allows footer items to wrap */
 }
 
 footer a {
-    color: #1F628E;
+    color: #e8586d;
     text-decoration: none;
 }
 
