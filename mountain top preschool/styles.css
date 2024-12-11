@@ -125,13 +125,43 @@ footer .social img {
     height: 80px;
 }
 
+/* Media Queries */
+
+@media (max-width: 768px) {
+    body{
+        font-size: 18px;
+    }
+
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+
 @media (max-width: 480px) {
+    body {
+        font-size: 16px; /* Smaller font size for very small screens */
+    }
+
     nav a {
         padding: 5px 10px;
+        font-size: 0.8em;
     }
 
     footer {
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
 }
