@@ -57,6 +57,7 @@ nav a:hover {
 #hero {
     text-align: center;
     margin: 20px 0;
+    height: 175px;
 }
 
 #hero-img {
