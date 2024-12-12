@@ -34,17 +34,20 @@ nav {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
+    flex-wrap: wrap; /* Allows stacking of nav items on smaller screens */
 }
 
 nav a {
     text-decoration: none;
     padding: 10px 20px;
-    color: #e8586d;
+    color: #e11030;
+    font-size: 1.2rem; /* Adjusted font size for responsiveness */
+    font-weight: bold;
 }
 
 nav a:hover {
     background-color: black;
-    color: #e8586d;
+    color: #e11030;
     border-radius: 5px;
 }
 
@@ -54,7 +57,7 @@ main {
     padding: 20px;
     background: white;
     border-radius: 10px;
-    color: #e8586d;
+    color: #e11030;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -98,17 +101,18 @@ button:hover {
 footer {
     background-color: white;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    color: #e8586d;
+    color: #e11030;
     margin-top: 20px;
     gap: 10px;
+    flex-wrap: wrap; /* Allows footer items to wrap */
+    font-weight: bold;
 }
 
 footer a {
-    color: #e8586d;
+    color: #e11030;
     text-decoration: none;
 }
 
