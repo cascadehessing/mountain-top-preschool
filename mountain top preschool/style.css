@@ -43,13 +43,13 @@ nav {
 nav a {
     text-decoration: none;
     padding: 10px 20px;
-    color: #e8586d;
+    color: #e11030;
     font-size: 1.2rem; /* Adjusted font size for responsiveness */
 }
 
 nav a:hover {
     background-color: black;
-    color: #e8586d;
+    color: #e11030;
     border-radius: 5px;
 }
 
@@ -101,7 +101,7 @@ h2 {
 
 h3 {
     font-size: clamp(1.5rem, 3vw, 2em); /* Fluid typography */
-    color: #e8586d;
+    color: #e11030;
 }
 
 /* Footer */
@@ -111,14 +111,14 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    color: #e8586d;
+    color: #e11030;
     margin-top: 20px;
     gap: 10px;
     flex-wrap: wrap; /* Allows footer items to wrap */
 }
 
 footer a {
-    color: #e8586d;
+    color: #e11030;
     text-decoration: none;
 }
 
