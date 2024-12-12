@@ -45,11 +45,12 @@ nav a {
     padding: 10px 20px;
     color: #e8586d;
     font-size: 1.2rem; /* Adjusted font size for responsiveness */
+    font-weight: bold;
 }
 
 nav a:hover {
     background-color: black;
-    color: #e8586d;
+    color: #e83650;
     border-radius: 5px;
 }
 
@@ -95,7 +96,7 @@ nav a:hover {
     background-color: white;
     border-radius: 10px;
     padding: 10px;
-    color: #e8586d;
+    color: #e83650;
 }
 
 /* About and Curriculum Sections */
@@ -104,9 +105,10 @@ nav a:hover {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    color: #e8586d;
+    color: #e83650;
     font-size: 1.1em;
     line-height: 1.5;
+    font-weight: bold;
 }
 
 /* Background Section */
@@ -150,14 +152,15 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-    color: #e8586d;
+    color: #e83650;
     margin-top: 20px;
     gap: 10px;
     flex-wrap: wrap; /* Allows footer items to wrap */
+    font-weight: bold;
 }
 
 footer a {
-    color: #e8586d;
+    color: #e83650;
     text-decoration: none;
 }
 
